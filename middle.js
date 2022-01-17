@@ -1,4 +1,4 @@
-const assertArraysEqual = require('/vagrant/w1/lotide/assertArraysEqual.js');
+const assertArraysEqual = require('./assertArraysEqual.js');
 
 // find the middle of an array
 

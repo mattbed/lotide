@@ -1,4 +1,4 @@
-const eqArrays = require('/vagrant/w1/lotide/eqArrays.js');
+const eqArrays = require('./eqArrays.js');
 
 // assert function implemented
 const assertArraysEqual = function(actual, expected) {
