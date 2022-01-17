@@ -1,26 +1,27 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail.js');
 
-// Test Code to ensure the array is not mutated
-const numbers = [1, 2, 3];
-tail(numbers);
-assertEqual(numbers.length, 3);
+describe("#tail", () => {
+  it("checks to ensure the original array is not mutated", () => {
+    let numbers = [1, 2, 3];
+    tail(numbers);
+    assert.deepEqual(numbers, [1, 2, 3]);
+  });
 
-// Test codes 1 through 4 testing various possible inputs
-const test1 = tail([5,6,7]);
-assertEqual(test1.length, 2);
-assertEqual(test1[0], 6);
-assertEqual(test1[1], 7);
+  it("returns [6, 7] for [5, 6, 7]", () => {
+    assert.deepEqual(tail([5, 6, 7]), [6, 7]);
+  });
 
-const test2 = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(test2.length, 2);
-assertEqual(test2[0], "Lighthouse");
-assertEqual(test2[1], "Labs");
+  it("returns ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(['Hello', 'Lighthouse', 'Labs']), ['Lighthouse', 'Labs']);
+  });
 
-const test3 = tail([]);
-assertEqual(test3.length, 0);
-assertEqual(test3[0], undefined);
+  it("returns [] for []", () => {
+    assert.deepEqual(tail([]), []);
+  });
 
-const test4 = tail([1]);
-assertEqual(test4.length, 0);
-assertEqual(test4[0], undefined);
+  it("returns [] for [1]", () => {
+    assert.deepEqual(tail([1]), []);
+  });
+
+});
