@@ -19,10 +19,10 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-console.log("true = ", eqArrays([[2, 3], [4]], [[2, 3], [4]])) // => true
-console.log("false = ", eqArrays([[2, 3], [4]], [[2, 3], [4, 5]])) // => false
-console.log("false = ", eqArrays([[2, 3], [4]], [[2, 3], 4])) // => false
-console.log("false = ", eqArrays([[2, 3], 5], [[2, 3], 4])) // => false
-console.log("true = ", eqArrays([[2, 3, [5]], [4]], [[2, 3, [5]], [4]])) // => true
+// console.log("true = ", eqArrays([[2, 3], [4]], [[2, 3], [4]])) // => true
+// console.log("false = ", eqArrays([[2, 3], [4]], [[2, 3], [4, 5]])) // => false
+// console.log("false = ", eqArrays([[2, 3], [4]], [[2, 3], 4])) // => false
+// console.log("false = ", eqArrays([[2, 3], 5], [[2, 3], 4])) // => false
+// console.log("true = ", eqArrays([[2, 3, [5]], [4]], [[2, 3, [5]], [4]])) // => true
 
 module.exports = eqArrays;
